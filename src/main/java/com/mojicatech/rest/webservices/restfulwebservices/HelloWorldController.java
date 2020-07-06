@@ -13,13 +13,15 @@ public class HelloWorldController {
 
     @GetMapping(path = "/hello-world")
     public String helloWorld(){
+
         return ("Hello World");
     }
 
 
     @GetMapping(path = "/hello-world-bean")
     public HelloWorldBean helloWorldBean(){
-        return new HelloWorldBean("Hello world");
+        throw new RuntimeException("Some Error has Happen! Contact support********");
+//        return new HelloWorldBean("Hello world");
     }
 
     @GetMapping(path = "/hello-world/path-variable/{name}")
